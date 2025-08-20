@@ -3,17 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OST Media Gateway</title>
-  <meta name="description" content="SEO-optimized gateway with random article display for tier-one CPM.">
-
+  <title>Step 1 - Redirect with SEO Article</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <main>
-    <h1>Loading best article for you...</h1>
-    <p>Please wait while we prepare the content.</p>
+  <!-- Top Ad -->
+  <div class="ad-slot ad-top">
+    <img class="ad-banner" src="https://via.placeholder.com/728x90?text=Top+Ad" alt="Advertisement">
+  </div>
+
+  <main class="container">
+    <article class="article-container">
+      <h1 id="article-title"></h1>
+      <div class="article-meta" id="article-meta"></div>
+
+      <!-- In-article Ad -->
+      <div class="ad-slot ad-in-article">
+        <img class="ad-banner" src="https://via.placeholder.com/300x250?text=In+Article+Ad" alt="Advertisement">
+      </div>
+
+      <div id="article-content"></div>
+    </article>
+
+    <!-- Countdown Section -->
+    <div class="countdown-box">
+      <p id="countdown-text">Please wait <span id="countdown">15</span> seconds...</p>
+      <button id="next-button" disabled>Continue</button>
+    </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Bottom Ad -->
+  <div class="ad-slot ad-bottom">
+    <img class="ad-banner" src="https://via.placeholder.com/728x90?text=Bottom+Ad" alt="Advertisement">
+  </div>
+
+  <!-- JSON-LD for SEO (filled dynamically in JS) -->
+  <script type="application/ld+json" id="json-ld"></script>
 </body>
 </html>
